@@ -1,0 +1,19 @@
+math mutual_repression
+{ realDomain t;
+       t.min = 0;t.delta = 0.01;t.max = 100; 
+  
+  //Define dependent variable
+	real x(t), y(t); 
+
+  //Define parameters
+	real r = 1; 
+	real n = 2;
+         
+  // Initial value
+        when (t = t.min){x = 0.1; y =0;}
+            
+  // ODEs
+	x:t = r/(1+y^n) - x;
+	y:t = r/(1+x^n) - y;
+	
+}

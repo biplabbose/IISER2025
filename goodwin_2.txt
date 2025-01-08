@@ -1,0 +1,22 @@
+math goodwin_2
+{ realDomain t;
+       t.min = 0;t.delta = 0.01;t.max = 100; 
+  
+  //Define dependent variable
+	real x(t), y(t), z(t); 
+
+  //Define parameters
+	real a = 1; 
+	real k_m = 0.1; 
+	real k_i = 0.1; 
+	real n = 1;
+	
+         
+  // Initial value
+        when (t = t.min){x = 0; y =0; z =0; }
+            
+  // ODEs
+	x:t = a/(k_m + k_i*z^n) - x;
+	y:t = x - y;
+	z:t = y - z;     
+}
