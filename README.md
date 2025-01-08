@@ -1,4 +1,4 @@
-# IISER2025
+# IISER Bhopal 2025
 This repository holds the codes for the workshop/presentation on "Design Principles In Biology: A Dynamical Systems Approach" at IISER Bhopal in January 2025.
 
 We use JSim to simulate dynamical systems modelled using systems of ODEs. 
